@@ -35,7 +35,10 @@ def regions():
     return [RegionInfo(name='us-east-1',
                        endpoint='cloudsearch.us-east-1.amazonaws.com',
                        connection_cls=boto.cloudsearch.layer1.Layer1),
-            ]
+            RegionInfo(name='us-west-2',
+                       endpoint='cloudsearch.us-west-2.amazonaws.com',
+                       connection_cls=boto.cloudsearch.layer1.Layer1),
+           ]
 
 
 def connect_to_region(region_name, **kw_params):
